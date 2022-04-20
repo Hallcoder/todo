@@ -9,6 +9,6 @@ function skipnext(){
      container.innerHTML = ''
      container.appendChild(loader)
     setTimeout(()=>{
-   window.location.href = '../notes.html'
+   window.location.href = '../index.html'
     },4000)
 }
