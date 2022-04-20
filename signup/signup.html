@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Poppins:wght@200;400;500;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signup.css" />
+    <title>Sign Up~</title>
+  </head>
+  <body>
+    <form method="post">
+    <div id="form2">
+        <h1>Sign Up</h1>
+          <div class="row">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Enter your Username" id="username"  required>
+          </div>
+        <div class="row">
+            <label >Email</label>
+            <input type="text" placeholder="Enter your email"  id="email" required>
+          </div>
+        <div class="row">
+            <label >Password</label>
+            <input type="text" placeholder="Enter your Password" id="password" required>
+          </div>
+          <div id="signup" class="googlefb row">
+              <input id='submit' type="submit" value ="Sign Up" >
+          </div>
+        </form>
+     
+        <div id="google"  class="googlefb">
+           <img src="../images/google.png" alt="">
+            <p>Sign Up with Google</p>
+        </div>
+        <p>Already Registered? <a href="../signIn/signin.html">Sign In</a></p>
+    </div>
+    <script src="./signup.js"></script>
+  </body>
+</html>
