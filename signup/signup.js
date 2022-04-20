@@ -12,7 +12,9 @@ function signup(e){
         },
         body:JSON.stringify({username,email,password})
     })
-    .then(res =>res.json())
+    .then(res =>{
+        console.log(res);
+    })
     .then(data => {
         window.location.href ='./email.html'
         console.log(data.message);
