@@ -14,6 +14,7 @@ function signup(e){
     })
     .then(res =>{
         console.log(res);
+        return res.json()
     })
     .then(data => {
         // window.location.href ='./email.html'
