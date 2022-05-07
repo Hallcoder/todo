@@ -1,4 +1,3 @@
-validate();
 let noteDiv = document.getElementById("notes");
 let button = document.getElementsByTagName("button");
 let title = document.getElementsByTagName("input")[0];
@@ -12,8 +11,7 @@ function validate(){
 else{
   heading.style.display ='none'
 }
-  },10)
- 
+  },5)
 }
 validate();
 title.addEventListener('keyup', (e)=>{
@@ -62,8 +60,23 @@ function add(){
        note.appendChild(text);
        note.setAttribute('class','notes') 
        note.appendChild(action)
-       noteDiv.appendChild(note)
-       title.value=' '
+       fetch('http://localhost:5000/notes',{
+        method:'POST',
+        headers:{
+          'Content-Type': 'application/json'
+        },
+        body:JSON.stringify({
+          title:title.value
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log('Note saved successfully');
+        noteDiv.appendChild(note)
+        title.value=' '
+      })
+      
+      
     }
 
  
